@@ -5,17 +5,16 @@
     <link rel="preload" href="img/loader.gif" as="image">
     <style>
         * .preloader {
-            width: 100vw;
-            height: 100vh;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: var(--clr-white);
             display: grid;
             justify-content: center;
             align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(9px);
             visibility: visible;
             z-index: 999;
             transition: all 1s linear;
@@ -33,10 +32,7 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navId" tabindex="0">
-    <!-- preloader -->
-    <div class="preloader">
-        <img src="img/loader.gif" alt="preloader" class="preloader__item" />
-    </div>
+    <?php include "preloader.php";?>
     <!-- header -->
     <?php
 
